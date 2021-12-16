@@ -17,4 +17,5 @@ Player with the lowest score wins the game.
 The game can also be paused at anytime, saved to a file, and pick up from the save file at later time.
 
 Below is a screenshot of the game.
+
 <img src="https://user-images.githubusercontent.com/61360634/146438352-b5d0185e-2168-40af-ab51-35c5dad64ae6.jpg" width="270" height="auto">
