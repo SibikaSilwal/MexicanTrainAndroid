@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoundPlayActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="6dp"
+                android:text="Boneyard Top Tile : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/t_roundNum"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/b_boneyardtoptile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="1dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:onClick="DrawTile"
+                android:paddingLeft="6dp"
+                android:paddingTop="1dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="1dp"
+                android:text="8-7"
+                app:backgroundTint="#E16161"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Human Hand Tiles"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recView_humanHand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Computer Hand Tiles"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recView_humanHand" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recView_computerHand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/b_engine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="4dp"
+                android:text="9\n9"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:backgroundTint="#49E14F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recViewCTrain" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recViewCTrain"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="165dp"
+                android:layout_marginLeft="165dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layoutDirection="rtl"
+                app:layout_constraintEnd_toEndOf="@+id/b_engine"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recView_computerHand">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <!--android:layoutDirection="rtl"-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recViewHTrain"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="165dp"
+                android:layout_marginLeft="165dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/b_engine"
+                app:layout_constraintTop_toBottomOf="@+id/b_engine">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recViewMTrain"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="72dp"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mexicanTrainLabel"
+                app:layout_constraintTop_toBottomOf="@+id/recViewHTrain" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/humanMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recViewMTrain">
+
+                <TextView
+                    android:id="@+id/humanTurnHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=">> Human's Turn"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/humansubmenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/humanTurnHeading">
+
+
+                    <Button
+                        android:id="@+id/b_saveGameHuman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onClick="SaveGame"
+                        android:padding="6dp"
+                        android:text="Save"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/b_quitGameHuman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onClick="QuitGame"
+                        android:padding="6dp"
+                        android:text="Quit"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toEndOf="@+id/b_saveGameHuman"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/b_GetHelpHuman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onClick="GetHelpHuman"
+                        android:padding="6dp"
+                        android:text="Get Help"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toEndOf="@+id/b_quitGameHuman"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/b_continueGameHuman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onClick="ContinueGameHuman"
+                        android:padding="6dp"
+                        android:text="Continue"
+                        android:textSize="14dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/b_GetHelpHuman"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pickTrainMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/humanTurnHeading">
+
+                    <TextView
+                        android:id="@+id/pickatrainHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Pick a train."
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/b_Mtrain"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="PickATrainUI"
+                        android:padding="0dp"
+                        android:text="M-train"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/pickatrainHeading" />
+
+                    <Button
+                        android:id="@+id/b_Htrain"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="PickATrainUI"
+                        android:padding="0dp"
+                        android:text="H-train"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toEndOf="@+id/b_Mtrain"
+                        app:layout_constraintTop_toBottomOf="@id/pickatrainHeading" />
+
+                    <Button
+                        android:id="@+id/b_Ctrain"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="4dp"
+                        android:onClick="PickATrainUI"
+                        android:padding="0dp"
+                        android:text="C-train"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toEndOf="@+id/b_Htrain"
+                        app:layout_constraintTop_toBottomOf="@id/pickatrainHeading" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/computerMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recViewMTrain">
+
+                <TextView
+                    android:id="@+id/computerTurnHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text=" >> Computer's Turn\nPlease select from options below."
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/computerMenu" />
+
+                <Button
+                    android:id="@+id/b_saveGameComputer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:onClick="SaveGame"
+                    android:padding="6dp"
+                    android:text="Save Game"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/computerTurnHeading" />
+
+                <Button
+                    android:id="@+id/b_quitGameComputer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:onClick="QuitGame"
+                    android:padding="6dp"
+                    android:text="Quit Game"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@+id/b_saveGameComputer"
+                    app:layout_constraintTop_toBottomOf="@+id/computerTurnHeading" />
+
+                <Button
+                    android:id="@+id/b_continueGameComputer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:onClick="ContinueGame"
+                    android:padding="6dp"
+                    android:text="Continue"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/b_quitGameComputer"
+                    app:layout_constraintTop_toBottomOf="@id/computerTurnHeading" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/mexicanTrainLabel"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="1dp"
+                android:text="M-train"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recViewHTrain" />
+
+            <Button
+                android:id="@+id/htrainlabel"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="1dp"
+                android:text="H-Train ->"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recViewCTrain" />
+
+            <Button
+                android:id="@+id/ctrainLabel"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="1dp"
+                android:text="&lt;- C-Train"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recView_computerHand" />
+
+            <Button
+                android:id="@+id/b_ComputerMarker"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="2dp"
+                android:text="(M)"
+                android:visibility="gone"
+                app:backgroundTint="#DD1010"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ctrainLabel" />
+
+            <Button
+                android:id="@+id/b_HumanMarker"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-10dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="2dp"
+                android:text="(M)"
+                android:visibility="gone"
+                app:backgroundTint="#DD1010"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/htrainlabel" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:text=" Round # : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/t_roundNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:text="#"
+                android:textColor="#9C27B0"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Round Score"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/t_RoundScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="8dp"
+                android:text="H->#, C->#"
+                android:textColor="#9C27B0"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Game Score:"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/t_RoundScore"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/t_GameScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:text="H->#, C->#"
+                android:textColor="#9C27B0"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/b_boneyardtoptile" />
+
+            <Button
+                android:id="@+id/b_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="5dp"
+                android:onClick="ViewLog"
+                android:text="LOG"
+                app:backgroundTint="#C17ACD"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recViewMTrain" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
